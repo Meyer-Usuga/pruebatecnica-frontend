@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/** Estilos del encabezado */
+header {
+    height: 70px;
+    width: 100%;
+    align-content: center;
+    background: rgb(220, 196, 164);
+    background: radial-gradient(circle, rgba(220, 196, 164, 1) 0%, rgba(148, 137, 122, 1) 100%);
+}
+
+.logo,
+.logo a {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.icon-menu {
+    margin-top: 5px;
+    vertical-align: middle;
+    width: 30px;
+}
+
+/** Estilos del menú de navegación */
+nav {
+    height: 50px;
+    width: 100%;
+    top: 0;
+    background-color: whitesmoke;
+
+}
+
+.menu {
+    font-size: 1rem;
+    align-content: center;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 0.15fr);
+    list-style-type: none;
+    justify-content: center;
+    margin: 0;
+}
+
+.nav-menu-item {
+    text-align: center;
+    align-content: center;
+    transition: all .2s ease-in-out;
+}
+
+.nav-menu-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.toggle-menu,
+#cbToggle {
+    display: none;
+}
+
+.nav-menu-item:hover {
+    transform: scale(1.05);
+}
+
+/** Media query para el responsive del menu*/
+@media(max-width: 650px) {
+    .toggle-menu {
+        display: initial;
+        margin: 10px;
+    }
+
+    .menu {
+        grid-template-columns: repeat(2, auto);
+        text-align: end;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-menu {
+        display: none;
+        transition: transform 0.5s ease-out;
+        position: relative;
+        background-color: white !important;
+        box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-menu-item {
+        text-align: start;
+        margin: 10px;
+    }
+
+    #cbToggle:checked~.nav-menu {
+        display: block;
+    }
+}
+
+/** Estilos del banner */
+
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/banner2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.abaout h1 {
+    color: white;
+    margin: 2 auto;
+    font-size: 3rem;
+}
+
+.abaout p {
+    color: white;
+    margin: 2 auto;
+    font-size: 1.1rem;
+}
+
+.btn-scroll{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: goldenrod;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-scroll:hover{
+    transform: scale(1.1);
+}
+
+/** Estilos para los servicios */
+
+.services {
+    margin: 20px;
+    text-align: center;
+}
+
+.services .title{
+    font-size: 2rem;
+}
+
+.services .image-card {
+    width: 50%;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.services .card-container {
+    display: grid;
+    gap: 15px;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+    padding: 20px;
+    height: auto;
+    max-width: 80%;
+    border-radius: 8px;
+    background: rgb(189, 168, 140);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-body p {
+    max-width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.btn-schedule{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: brown;
+    color:white;
+    cursor: pointer;
+    margin: 20px;
+}
+
+
+/** Estilos del footer*/
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    background-color: rgb(162, 163, 163);
+}
+
+.footer-menu {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 0.05fr);
+    list-style-type: none;
+}
+
+.footer-menu-item a {
+    text-decoration: none;
+}
