@@ -7,7 +7,7 @@ body {
 
 /** Estilos del encabezado */
 header {
-    height: 70px;
+    height: 80px;
     width: 100%;
     align-content: center;
     background: rgb(220, 196, 164);
@@ -31,6 +31,11 @@ header {
     width: 30px;
 }
 
+.icon-logo{
+    vertical-align: middle;
+    width: 70px;
+}
+
 /** Estilos del menú de navegación */
 nav {
     height: 50px;
@@ -38,7 +43,7 @@ nav {
     position: sticky;
     z-index: 1001;
     top: 0;
-    background-color: whitesmoke;
+    background-color: rgb(235, 234, 234);
 
 }
 
@@ -141,6 +146,7 @@ nav {
     background-color: goldenrod;
     color: black;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .btn-scroll:hover{
@@ -198,6 +204,11 @@ nav {
     margin: 20px;
 }
 
+.btn-schedule:hover{
+    background-color: goldenrod;
+    color: black;
+}
+
 
 /** Estilos del footer*/
 
@@ -213,6 +224,15 @@ nav {
     justify-content: center;
     grid-template-columns: repeat(3, 0.05fr);
     list-style-type: none;
+    padding: 0;
+}
+
+.footer-menu-item{
+    transition: transform 0.3s ease;
+}
+
+.footer-menu-item:hover{
+    transform: scale(1.14);
 }
 
 .footer-menu-item a {
@@ -262,6 +282,7 @@ nav {
     opacity: 1;
 }
 
+/** Estilos del modal */
 .modal{
     border: none;
     margin: 10px auto;
@@ -291,7 +312,82 @@ nav {
     text-align: end;
 }
 
+/** Estilos del formulario de contacto */
+.contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
 
+.banner-contact{
+    background-image: url('../images/banner-contact.png');
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 80vh;
+}
+
+.form-contact h1{
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-input{
+    padding: 15px;
+    border: none;
+    width: 400px;
+    border-radius: 3px;
+    background-color: #eeeded;
+}
+
+.form-input:focus{
+    outline: none;
+    border: 1px solid;
+    border-color: goldenrod;
+}
+
+.location .direction{
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-send{
+    padding: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 60px;
+    border-radius: 3px;
+    background-color: goldenrod;
+}
+
+.btn-send:hover{
+    background-color: gold;
+}
+
+@media(max-width:800px){
+    
+    .banner-contact{
+        display: none;
+    }
+
+    .form-contact{
+        display: grid;
+        place-items: center;
+    }
+
+    .form-input{
+        width: 320px;
+    }
+}
 
 
 
