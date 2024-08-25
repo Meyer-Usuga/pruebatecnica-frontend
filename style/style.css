@@ -35,6 +35,8 @@ header {
 nav {
     height: 50px;
     width: 100%;
+    position: sticky;
+    z-index: 1001;
     top: 0;
     background-color: whitesmoke;
 
@@ -64,13 +66,13 @@ nav {
     color: black;
 }
 
+.nav-menu-item:hover {
+    transform: scale(1.05);
+}
+
 .toggle-menu,
 #cbToggle {
     display: none;
-}
-
-.nav-menu-item:hover {
-    transform: scale(1.05);
 }
 
 /** Media query para el responsive del menu*/
@@ -95,6 +97,7 @@ nav {
         box-shadow: 0 2px rgba(0, 0, 0, 0.1);
         margin: 0;
         padding: 0;
+        z-index: 1001;
     }
 
     .nav-menu-item {
@@ -108,7 +111,6 @@ nav {
 }
 
 /** Estilos del banner */
-
 .banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/banner2.jpg');
     background-size: cover;
@@ -216,3 +218,81 @@ nav {
 .footer-menu-item a {
     text-decoration: none;
 }
+
+/** Estilos de la página de galeria */
+.pictures{
+    display: grid;
+    justify-items: center;
+    margin: 20px;
+    gap: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.picture-item{
+    position: relative;
+}
+
+.picture-item img{
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all .5s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.picture-item .item-description{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.picture-item:hover .item-description{
+    opacity: 1;
+}
+
+.modal{
+    border: none;
+    margin: 10px auto;
+    max-width: 450px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal img{
+    width: 100%;
+    height: 430px;
+}
+
+.modal-header .btn-close{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.modal-header .modal-closed{
+    text-align: end;
+}
+
+
+
+
+
+
