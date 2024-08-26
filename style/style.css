@@ -147,10 +147,25 @@ nav {
     color: black;
     cursor: pointer;
     transition: transform 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-scroll:hover{
     transform: scale(1.1);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /** Estilos para los servicios */
@@ -202,6 +217,7 @@ nav {
     color:white;
     cursor: pointer;
     margin: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-schedule:hover{
@@ -209,41 +225,11 @@ nav {
     color: black;
 }
 
-
-/** Estilos del footer*/
-
-.footer {
-    text-align: center;
-    padding: 10px;
-    margin-top: 40px;
-    background-color: rgb(162, 163, 163);
-}
-
-.footer-menu {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3, 0.05fr);
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-menu-item{
-    transition: transform 0.3s ease;
-}
-
-.footer-menu-item:hover{
-    transform: scale(1.14);
-}
-
-.footer-menu-item a {
-    text-decoration: none;
-}
-
 /** Estilos de la página de galeria */
 .pictures{
     display: grid;
     justify-items: center;
-    margin: 20px;
+    margin-top: 30px;
     gap: 60px;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
@@ -327,6 +313,7 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
     min-height: 80vh;
+    mask-image: linear-gradient(black 98%, transparent);
 }
 
 .form-contact h1{
@@ -368,7 +355,7 @@ nav {
 }
 
 .btn-send{
-    padding: 5px;
+    padding: 8px;
     margin-top: 5px;
     border: none;
     color: white;
@@ -379,7 +366,7 @@ nav {
 }
 
 .btn-send:hover{
-    background-color: gold;
+    background-color: brown;
 }
 
 @media(max-width:800px){
@@ -397,6 +384,35 @@ nav {
     .form-input{
         width: 320px;
     }
+}
+
+/** Estilos del footer*/
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    background-color: rgb(204, 205, 205);
+}
+
+.footer-menu {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 0.05fr);
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-menu-item{
+    transition: transform 0.3s ease;
+}
+
+.footer-menu-item:hover{
+    transform: scale(1.14);
+}
+
+.footer-menu-item a {
+    text-decoration: none;
 }
 
 
