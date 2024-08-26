@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    overflow-x: hidden;
+    display: grid;
 }
 
 /** Estilos del encabezado */
@@ -352,6 +352,14 @@ nav {
     border-color: goldenrod;
 }
 
+.alert-text{
+    display: grid;
+    margin: 5px;
+    font-size: 0.8rem;
+    color: brown;
+    display: none;
+}
+
 .location .direction{
     text-decoration: none;
     color: black;
@@ -361,6 +369,7 @@ nav {
 
 .btn-send{
     padding: 5px;
+    margin-top: 5px;
     border: none;
     color: white;
     cursor: pointer;
@@ -376,7 +385,8 @@ nav {
 @media(max-width:800px){
     
     .banner-contact{
-        display: none;
+        background-size: contain;
+        min-height: 30vh;
     }
 
     .form-contact{
